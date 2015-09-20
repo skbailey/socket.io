@@ -13,5 +13,6 @@ a Web Socket connection between clients and server
 
 1. `brew install mongo` (preferably version 3 or above)
 2. Clone the repo
-3. `npm install`
-4. `npm start`
+3. Copy .env-example to .env
+4. `npm install`
+5. `npm start`
