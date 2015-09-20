@@ -16,7 +16,7 @@ jQuery(function($){
   termCollection.on('add', function(mostRecentTerm, terms){
     termHeaderView.model.set(mostRecentTerm.attributes)
 
-    var priorSearchedTerms = terms.slice(1,4);
+    var priorSearchedTerms = terms.slice(1,5);
     termListView.collection.reset(priorSearchedTerms);
   });
 

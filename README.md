@@ -1,2 +1,17 @@
-# socket.io
-Sample Node app using Socket.io
+# Insights 
+Sample Node app using Express and Socket.io to establish
+a Web Socket connection between clients and server
+
+## Stack
+* Node
+* Express
+* Backbone
+* Mongo/Mongoose
+* Socket.io
+
+## Setup
+
+1. `brew install mongo` (preferably version 3 or above)
+2. Clone the repo
+3. `npm install`
+4. `npm start`
