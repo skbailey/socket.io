@@ -10,7 +10,7 @@ var app = express();
 
 // Setup mongo database
 var mongoose = require('mongoose');
-var db = mongoose.connect('mongodb://localhost/dev').connection;
+var db = mongoose.connect(process.env.MONGODB_URL).connection;
 db.on('error', function(){ console.error('Database connection error'); });
 db.once('open', function callback () {
   console.log('Connected to Mongo database!')
