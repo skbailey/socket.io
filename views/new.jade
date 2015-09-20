@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  main.new
+    form.form-inline
+      .form-group
+        label.sr-only(for="search-input") Enter a search term
+        input#search-input.form-control(type="text")
+      button.btn.btn-default.btn-primary.hidden-sm.hidden-xs(type="submit") Enter
+  
+  script(src="/javascripts/lib/views/form_view.js")  
+  script(src="/javascripts/lib/collections/term_collection.js")
+  script(src="/javascripts/lib/new.js")

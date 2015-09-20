@@ -1,24 +1,16 @@
 var TermListView = Backbone.View.extend({
 
   initialize: function(options){
-    //this.collection = this.collection || new Backbone.Collection();
+    this.collection = new Backbone.Collection();
     this.listenTo(this.collection, "reset", this.render);
-    this.listenTo(this.collection, "add", this.addSubview);
   },
 
   render: function(){
     var self = this;
+    self.$el.empty();
     this.collection.each(function(term){
       self.renderSubview(term);
     })
-  },
-
-  getData: function(){
-    this.collection.fetch();
-  },
-
-  addSubview: function(model){
-    this.renderSubview(model);
   },
 
   renderSubview: function(model){

@@ -1,12 +1,12 @@
 extends layout
 
 block content
-  h1 Insights
-  p A quick demo on Node with Socket.io
-
-  ul#terms
+  main.index
+    h1
+    ul#terms
     
   script(src="/javascripts/lib/collections/term_collection.js")
-  script(src="/javascripts/lib/views/term_view.js")
+  script(src="/javascripts/lib/views/term_view.js")  
+  script(src="/javascripts/lib/views/term_header_view.js")
   script(src="/javascripts/lib/views/term_list_view.js")
-  script(src="/javascripts/lib/base.js")
+  script(src="/javascripts/lib/index.js")

@@ -8,6 +8,7 @@ module.exports = function(io){
   router.get('/terms', function(req, res, next) {
     Term
       .find({})
+      .sort('-createdAt')
       .exec(function(err, terms){
         res.format({
           html: function(){
@@ -21,6 +22,10 @@ module.exports = function(io){
           }
         });
       });
+  });
+
+  router.get('/terms/new', function(req, res, next){
+    res.render('new');
   });
 
   router.post('/terms', function(req, res, next){
