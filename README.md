@@ -15,4 +15,4 @@ a Web Socket connection between clients and server
 2. Clone the repo
 3. Copy .env-example to .env
 4. `npm install`
-5. `npm start`
+5. `foreman start`

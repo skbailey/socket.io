@@ -30,7 +30,7 @@ module.exports = function(io){
 
   router.post('/terms', function(req, res, next){
     var term = new Term({
-      description: req.body.description
+      description: req.body.searchTerm
     });
 
     term.save(function(err, term){
