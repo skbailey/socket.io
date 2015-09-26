@@ -9,10 +9,11 @@ module.exports = function(io){
     Term
       .find({})
       .sort('-createdAt')
+      .limit(5)
       .exec(function(err, terms){
         res.format({
           html: function(){
-            res.render('terms', {
+            res.render('index', {
               terms: terms
             })
           },
@@ -29,9 +30,8 @@ module.exports = function(io){
   });
 
   router.post('/terms', function(req, res, next){
-    console.log("request body", req.body);
     var term = new Term({
-      description: req.body.properties.searchTerm
+      description: req.body.description
     });
 
     term.save(function(err, term){

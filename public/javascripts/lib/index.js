@@ -1,23 +1,17 @@
 jQuery(function($){
   // Load the models
   
-  var termHeaderView = new TermHeaderView({ el: 'main h1' });
   var termListView = new TermListView({ el: 'main #terms' });
   var termCollection = new TermCollection();
 
   termCollection.on('reset', function(terms){
-    var lastSearchedTerm = terms.first();
-    termHeaderView.model.set(lastSearchedTerm.attributes)
-
-    var priorSearchedTerms = terms.slice(1,5);
-    termListView.collection.reset(priorSearchedTerms);
+    var latestTerms = terms.first(5);
+    termListView.collection.reset(latestTerms);
   });
 
   termCollection.on('add', function(mostRecentTerm, terms){
-    termHeaderView.model.set(mostRecentTerm.attributes)
-
-    var priorSearchedTerms = terms.slice(1,5);
-    termListView.collection.reset(priorSearchedTerms);
+    var latestTerms = terms.first(5);
+    termListView.collection.reset(latestTerms);
   });
 
   termCollection

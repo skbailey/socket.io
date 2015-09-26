@@ -1,0 +1,19 @@
+#terms {
+  width: 400px;
+  margin: auto;
+  padding: 0;
+  list-style-type: none;
+}
+
+#terms .search-term {
+  margin: 35px;
+  text-align: center;
+  text-transform: lowercase;
+}
+
+#terms .search-term:first-child {
+  padding: 20px;
+  font-size: 2.5em;
+  text-align: center;
+  text-transform: lowercase;
+}

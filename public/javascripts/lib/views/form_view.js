@@ -14,7 +14,7 @@ var FormView = Backbone.View.extend({
     evt.preventDefault();
     input = this.$('input');
 
-    this.collection.create({ searchTerm: input.val() });
+    this.collection.create({ description: input.val() });
     input.val('');
   }
 });
