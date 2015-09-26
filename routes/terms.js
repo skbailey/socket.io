@@ -5,7 +5,7 @@ var router = express.Router();
 module.exports = function(io){
 
   /* GET users listing. */
-  router.get('/terms', function(req, res, next) {
+  router.get('/', function(req, res, next) {
     Term
       .find({})
       .sort('-createdAt')
@@ -25,11 +25,11 @@ module.exports = function(io){
       });
   });
 
-  router.get('/terms/new', function(req, res, next){
+  router.get('/new', function(req, res, next){
     res.render('new');
   });
 
-  router.post('/terms', function(req, res, next){
+  router.post('/', function(req, res, next){
     var term = new Term({
       description: req.body.description
     });
